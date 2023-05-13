@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
+.header-page{
+    background-color: #F5F5F5;
+    height: 806px;
+    position: relative;
+    max-width: 1500px;
+    min-width: none;
+}
+header{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 32px 0px;
+    width: 100%;
+}
+.mulih-items{
+    display: inline-flex;
+    align-items: center;
+}
+.mulih-icon{
+    background-color: #4BA586;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 1.5em;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mulih-name{
+    color: #4BA586;
+    padding-left: 8px;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+nav{
+    display: inline-flex;
+    justify-content: space-between;
+}
+nav ul{
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+}
+nav ul li{
+    padding: 0px 24px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #8E8E8E;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li .home{
+    color: #69B99D;
+}
+nav .account{
+    display: inline-flex;
+    padding-left: 8px;
+}
+.login, .sign-in{
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 40px;
+    width: 75px;
+    text-align: center;
+}
+.login{
+    background-color: #69B99D;
+}
+.login a{
+    text-decoration: none;
+    color: white;
+}
+.sign-in a{
+    color: #69B99D;
+    text-decoration: none;
+}
+.bernard{
+    background: url(imgs/bernhouse.png);
+    position: absolute;
+    width: 806px;
+    height: 761px;
+    right: -8px;
+    bottom: 0;
+    z-index: 1;
+}
+.state{
+    padding: 12px 24px;
+    color: #69B99D;
+    background-color: #F8F9FE;
+    font-weight: 500;
+    width: fit-content;
+}
+.header-page h1{
+    color: #1F2744;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    padding: 24px 0;
+}
+.header-page p{
+    width: 480px;
+    color: #73788C;
+    font-weight: 400;
+    font-size: 16px;
+}
+.header-texts{
+    padding-top: 40px;
+    padding-left: 120px;
+    position: absolute;
+    z-index: 5;
+    width: 655px;
+    display: flex;
+    flex-direction: column;
+    height: 538px;
+    justify-content: space-between;
+}
+.header-searching{
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+}
+.header-searching .buttons{
+    display: inline-flex;
+}
+.header-searching .buy button{
+    color: #69B99D;
+    background-color: #FEFEFF;
+    border: 0;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 12px 32px;
+}
+.header-searching .rent button{
+    color: #A6A6A6;
+    background-color: #F5F5F5;
+    border: 0;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 12px 32px;
+}
+.specifications{
+    padding: 32px 0;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FEFEFF;
+}
+.location, .type, .price{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+.places, .types, .prices{
+    color: #A6A6A6;
+}
+.search{
+    color: #FFFFFF;
+    background-color: #69B99D;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 18px 48px;
+}
+.discover{
+    padding: 120px;
+    display: flex;
+    flex-direction: column;
+}
+.disc{
+    padding: 12px 24px;
+    color: #69B99D;
+    background-color: #F8F9FE;
+    font-weight: 500;
+    width: fit-content;
+}
+.discover h1{
+    color: #1F2744;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    padding: 24px 0;
+}
+.discover .texts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.texts p{
+    max-width: 500px;
+    color: #73788C;
+    font-weight: 400;
+    font-size: 16px;
+}
+.learn{
+    color: #69B99D;
+    font-weight: 500;
+    font-size: 18px;
+}
+.contain-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 48px
+}
+.card{
+    padding: 16px;
+    border: 1px solid #DEDCDA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #1F2744;
+    font-weight: 600;
+    font-size: 24px;
+    height: 420px;
+}
+.card img{
+    max-width: 310px;
+}
+.card p{
+    color: #A6A6A6;
+    font-weight: 400;
+    font-size: 16px;
+}
+.card .price{
+    display: flex;
+    justify-content: space-between;
+    color: #69B99D;
+    font-weight: 600;
+    font-size: 24px;
+}
+.price .area{
+    background-color: #F5F5F5;
+    padding: 4px 8px;
+    color: #A6A6A6;
+    font-weight: 400;
+    font-size: 16px;
+}
+.price .area span{
+    color: #1F2744;
+}
+.card .inquiry{
+    border: 1px solid #69B99D;
+    color: #69B99D;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 48px;
+}
