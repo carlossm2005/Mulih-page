@@ -20,29 +20,8 @@ header{
     justify-content: space-around;
     padding: 32px 0px;
     width: 100%;
-}
-.mulih-items{
-    display: inline-flex;
-    align-items: center;
-}
-.mulih-icon{
-    background-color: #4BA586;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 800;
-    font-size: 1.5em;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mulih-name{
-    color: #4BA586;
-    padding-left: 8px;
-    font-weight: 500;
-    font-size: 1.5em;
+    position: relative;
+    z-index: 5;
 }
 nav{
     display: inline-flex;
@@ -53,16 +32,14 @@ nav ul{
     display: inline-flex;
     align-items: center;
 }
-nav ul li{
-    padding: 0px 24px;
-}
 nav ul li a{
     text-decoration: none;
     color: #8E8E8E;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 500;
+    padding: 18px 24px;
 }
-nav ul li .home{
+nav ul li a:hover{
     color: #69B99D;
 }
 nav .account{
@@ -71,10 +48,8 @@ nav .account{
 }
 .login, .sign-in{
     font-weight: 500;
-    font-size: 16px;
-    padding: 15px 40px;
-    width: 75px;
-    text-align: center;
+    font-size: 0.9rem;
+    display: flex;
 }
 .login{
     background-color: #69B99D;
@@ -82,17 +57,19 @@ nav .account{
 .login a{
     text-decoration: none;
     color: white;
+    padding: 15px 40px;
 }
 .sign-in a{
     color: #69B99D;
     text-decoration: none;
+    padding: 15px 40px;
 }
 .bernard{
     background: url(imgs/bernhouse.png);
     position: absolute;
-    width: 806px;
+    width: 798px;
     height: 761px;
-    right: -8px;
+    right: 0;
     bottom: 0;
     z-index: 1;
 }
@@ -103,18 +80,25 @@ nav .account{
     font-weight: 500;
     width: fit-content;
 }
+.bloques-mayus{
+    padding: 12px 24px;
+    color: #69B99D;
+    background-color: #F8F9FE;
+    font-weight: 500;
+    width: fit-content;
+}
 .header-page h1{
     color: #1F2744;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 64px;
+    font-size: 3.7rem;
     padding: 24px 0;
 }
 .header-page p{
     width: 480px;
     color: #73788C;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .header-texts{
     padding-top: 40px;
@@ -140,7 +124,7 @@ nav .account{
     background-color: #FEFEFF;
     border: 0;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.4rem;
     padding: 12px 32px;
 }
 .header-searching .rent button{
@@ -148,7 +132,7 @@ nav .account{
     background-color: #F5F5F5;
     border: 0;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.4rem;
     padding: 12px 32px;
 }
 .specifications{
@@ -161,18 +145,19 @@ nav .account{
 .location, .type, .price{
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 .places, .types, .prices{
     color: #A6A6A6;
 }
-.search{
+.search button{
     color: #FFFFFF;
     background-color: #69B99D;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 18px 48px;
+    border: none;
 }
 .discover{
     padding: 120px;
@@ -187,10 +172,10 @@ nav .account{
     width: fit-content;
 }
 .discover h1{
-    color: #1F2744;
+    color: #054457;
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 2.8rem;
     padding: 24px 0;
 }
 .discover .texts{
@@ -202,12 +187,17 @@ nav .account{
     max-width: 500px;
     color: #73788C;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .learn{
     color: #69B99D;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+.learn img{
+    padding: 0 8px;
 }
 .contain-cards{
     display: flex;
@@ -223,7 +213,7 @@ nav .account{
     justify-content: space-between;
     color: #1F2744;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.4rem;
     height: 420px;
 }
 .card img{
@@ -232,30 +222,315 @@ nav .account{
 .card p{
     color: #A6A6A6;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .card .price{
     display: flex;
     justify-content: space-between;
     color: #69B99D;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.4rem;
 }
 .price .area{
     background-color: #F5F5F5;
     padding: 4px 8px;
     color: #A6A6A6;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
 }
 .price .area span{
     color: #1F2744;
 }
 .card .inquiry{
+    display: flex;
+}
+.card .inquiry a{
     border: 1px solid #69B99D;
     color: #69B99D;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     padding: 12px 48px;
+    width: 100%;
+    text-decoration: none;
+}
+.card .inquiry a:hover{
+    color: #FEFEFF;
+    background-color: #69B99D;
+}
+.advante{
+    padding: 80px 120px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+}
+.advante img{
+    max-width: min-content;
+}
+.div-vante{
+    padding: 12px 24px;
+    color: #69B99D;
+    background-color: #F8F9FE;
+    font-weight: 500;
+    width: fit-content;
+}
+.advante h1{
+    font-family: 'Rubik', sans-serif;
+    color: #054457;
+    font-weight: 600;
+    font-size: 2.7rem;
+    max-width: 400px;
+    padding: 16px 0;
+}
+.container-grid{
+    padding-top: 48px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 32px;
+}
+.grid-divs{
+    display: flex;
+    flex-direction: column;
+}
+.grid-divs h1{
+    color: #054457;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.grid-divs p{
+    color: #73788C;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.about-us{
+    padding: 120px;
+    display: flex;
+    justify-content: space-between;
+    height: 570px;
+}
+.about-us .left{
+    position: relative;
+    width: 51%;
+}
+.about-us .right{
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;    
+    width: 44%;
+}
+.right .abt{
+    padding: 12px 24px;
+    color: #69B99D;
+    background-color: #F8F9FE;
+    font-weight: 500;
+    width: fit-content;
+}
+.right h1{
+    font-family: 'Rubik', sans-serif;
+    color: #054457;
+    font-weight: 600;
+    font-size: 2.7rem;
+}
+.right p{
+    color: #73788C;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.right button{
+    color: #FFFFFF;
+    background-color: #69B99D;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 18px 48px;
+    border: none;
+}
+.left .rect-230{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+.block-salerent{
+    background-color: #FFFFFF;
+    width: 75%;
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+    padding: 12px 32px;
+}
+.propertysale, .apartmenrent{
+    display: flex;
+    align-items: center;
+}
+.block-salerent h1{
+    color: #054457;
+    font-weight: 600;
+    font-size: 2.7rem;
+}
+.block-salerent p{
+    color: #A6A6A6;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.block-rev{
+    position: absolute;
+    z-index: 5;
+    top: 40px;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FEFEFF;
+    padding: 0px 32px 32px 32px;    
+    box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
+}
+.block-rev h1{
+    color: #054457;
+    font-weight: 400;
+    font-size: 4rem;
+}
+.block-rev p{
+    color: #A6A6A6;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.block-rev .revs{
+    color: #054457;
+}
+.customer{
+    padding: 0px 120px 120px 120px;
+    display: flex;
+    flex-direction: column;
+}
+.peopel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.peopel h1{
+    font-family: 'Rubik', sans-serif;
+    color: #054457;
+    font-size: 2.7rem;
+    font-weight: 600;
+    padding: 16px 0;
+}
+.customer .card{
+    max-height: 280px;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+}
+.customer .card img{
+    width: min-content;
+}
+.card .review{
+    color: #1F2744;
+    font-weight: 600;
+    font-size: 1rem;
+    max-width: 270px;
+}
+.card .comentary{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.card .designer{
+    display: flex;
+}
+.designer img{
+    width: fit-content;
+    height: auto;
+}
+.designer .name{
+    display: flex;
+    flex-direction: column;
+    color: #0B2E29;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0 14px;
+}
+.name p{
+    color: #767676;
+    font-size: 0.75rem;
+}
+.footer{
+    background-color: #F5F5F5;
+    padding: 80px 120px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+.mail{
+    max-width: 350px;
+}
+.mail img{
+    padding: 0 0 8px 0;
+}
+.mail p{
+    color: #1F2744;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 8px 0;
+}
+.mail h1{
+    color: #0B2E29;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 16px 0;
+}
+.mail .send input, button{
+    border: 0;
+    font-size: 0.9rem;}
+
+.send input::placeholder{
+    color: #D7D7D7;
+}
+.send input:focus{
+    outline: none;
+}
+.send{
+    max-width: 350px;
+    display: flex;
+}
+.send input{
+    width: 260px;
+    padding: 8px 0px 8px 16px;
+}
+.send button{
+    background-color: #69B99D;
+    color: #FEFEFF;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 24px;
+}
+.community p,.service p, .follow p{
+    color: #0B2E29;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.service ul, .community ul{
+    list-style-type: none;
+}
+.service li, .community li{
+    padding: 8px 0;
+}
+.service li a, .community li a{
+    text-decoration: none;
+    color: #575757;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.follow ul{
+    list-style-type: none;
+    display: flex;
+}
+.follow li{
+    padding: 8px;
 }
