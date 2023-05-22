@@ -12,7 +12,52 @@ body{
     height: 806px;
     position: relative;
     max-width: 1500px;
-    min-width: none;
+}
+.head-resp{
+    display: none;
+}
+.head-resp button{
+    color: #FFFFFF;
+    background-color: #69B99D;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 18px 48px;
+    border: none;
+}
+.menu-resp button{
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 2rem;
+}
+.menu-resp{ 
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 10;
+    left: 0; 
+    background-color: rgb(255, 255, 255); 
+    overflow-x: hidden; 
+    transition: 0.9s;
+    text-align: center;
+}
+.contenido-resp{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    width: 100%;
+}
+.contenido-resp a{
+    padding: 20px 0;
+    width: 100%;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #69B99D;
 }
 header{
     display: inline-flex;
@@ -200,10 +245,10 @@ nav .account{
     padding: 0 8px;
 }
 .contain-cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 48px
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 48px;
+    gap: 30px;
 }
 .card{
     padding: 16px;
@@ -214,7 +259,9 @@ nav .account{
     color: #1F2744;
     font-weight: 600;
     font-size: 1.4rem;
-    height: 420px;
+    min-height: 420px;
+    max-width: 305px;
+    min-width: 200px;
 }
 .card img{
     max-width: 310px;
@@ -237,6 +284,7 @@ nav .account{
     color: #A6A6A6;
     font-weight: 400;
     font-size: 1rem;
+    width: fit-content;
 }
 .price .area span{
     color: #1F2744;
@@ -356,7 +404,8 @@ nav .account{
 }
 .block-salerent{
     background-color: #FFFFFF;
-    width: 75%;
+    min-width: 75%;
+    max-width: 100%;
     display: flex;
     position: absolute;
     z-index: 5;
@@ -422,10 +471,10 @@ nav .account{
     padding: 16px 0;
 }
 .customer .card{
-    max-height: 280px;
+    max-height: 450px;
     max-width: 310px;
-    display: flex;
-    flex-direction: column;
+    height: 280px;
+    min-height: 280px;
 }
 .customer .card img{
     width: min-content;
@@ -444,8 +493,8 @@ nav .account{
     display: flex;
 }
 .designer img{
-    width: fit-content;
     height: auto;
+    max-height: 48px;
 }
 .designer .name{
     display: flex;
@@ -464,7 +513,9 @@ nav .account{
     padding: 80px 120px;
 }
 footer{
-    display: flex;
+    display: inline-grid;
+    width: -webkit-fill-available;
+    grid-template-columns: 350px 145px 145px 150px;
     justify-content: space-between;
 }
 .mail{
@@ -487,8 +538,8 @@ footer{
 }
 .mail .send input, button{
     border: 0;
-    font-size: 0.9rem;}
-
+    font-size: 0.9rem;
+}
 .send input::placeholder{
     color: #D7D7D7;
 }
@@ -533,4 +584,226 @@ footer{
 }
 .follow li{
     padding: 8px;
+}
+@media only screen and (max-width:1300px){
+    .discover, .customer{
+        padding: 60px;
+    }
+}
+@media only screen and (max-width:1210px){
+    .bernard{
+        width: 600px;
+    }
+    .footer{
+        padding: 80px;
+    }
+}
+@media only screen and (max-width:1055px){
+    .header-page{
+        min-height: 850px;
+    }
+    .header-texts{
+        padding-left: 40px;
+        padding-top: 0;
+        max-width: 600px;
+        width: auto;
+    }
+    .bernard{
+        width: 450px;
+        height: 650px;
+    }
+    header{
+        flex-direction: column;
+        padding: 30px 0 0 0;    
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    nav .account{
+        padding: 20px 0;
+    }
+    .discover{
+        padding: 60px 30px;
+    }
+    .advante{
+        padding: 40px;
+    }
+    .contain-cards{  
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .container-grid{
+        grid-template-columns: auto auto;
+    }
+    .customer .card{
+        max-width: 100%;
+        min-width: 50%;
+        width: auto;
+    }
+    .about-us{
+        padding: 40px;
+    }
+    .footer{
+        padding: 40px
+    }
+    footer{
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        gap: 50px;
+    }
+}
+@media only screen and (max-width:860px){
+    .about-us{
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 830px;
+
+    }
+    .about-us .left{
+        width: 80%;
+        height: 470px;
+    }
+    .left .rect-230{
+
+    }
+    .left .block-rev{
+        position: absolute;
+        top: auto;
+        left: auto;
+    }
+    .about-us .right{
+        padding: 0;
+        width: 80%;
+    }
+}
+@media only screen and (max-width:745px){
+    .head-resp{
+        display: flex;
+        padding: 30px 0;
+        justify-content: space-between;
+        width: 90%;
+    }
+    header{
+        display: none;
+    }
+    .bernard{
+        display: none;
+    }
+    .header-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .header-texts{
+        position: static;
+        padding: 0;
+        max-width: 100%;
+    }
+    .peopel, .discover .texts{
+        flex-direction: column;
+        align-items: start;
+    }
+    .about-us .right, .about-us .left{
+        width: 90%;
+        padding: 30px 0;
+    }
+    .send input{
+        width: auto;
+    }
+}
+@media only screen and (max-width:640px){
+    .header-page{
+        min-height: 1000px;
+    }
+    .header-texts{
+        align-items: center;
+    }
+    .header-texts h1, .header-texts p{
+        text-align: center;
+        width: 100%;
+    }
+    .discover{
+        position: relative;
+        min-height: 1700px;
+    }
+    .header-searching{
+        width: 100%;
+    }
+    .buttons{
+        width: 100%;
+    }
+    .buy, .rent{
+        width: 50%;
+    }
+    .buttons button{
+        width: 100%;
+    }
+    .specifications{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 20px;
+    }
+    .specifications div{
+        padding: 10px 0;
+    }
+    .container-grid{
+        grid-template-columns: auto
+    }
+    footer{
+        grid-template-columns: auto
+    }
+    .left .block-salerent{
+        padding: 5px 3px;
+    }
+    .left .block-rev{
+        position: absolute;
+        top: 0;
+        left: auto;
+    }
+    .left img{
+        position: static;
+    }
+}
+@media only screen and (max-width:500px){
+    .discover h1{
+        font-size: 2rem;
+    }
+    .about-us{
+        padding: 10px;
+    }
+    .about-us .left{
+        display: flex;
+        height: min-content;
+        justify-content: center;
+    }
+    .left .rect-230{
+        display: none;
+    }
+    .left .block-salerent{
+        flex-direction: column;
+        justify-content: center;
+        position: static;
+        border: 1px solid #DEDCDA;
+        min-width: initial;
+    }
+    .left .block-rev p{
+        text-align: center;
+    }
+    .left .block-rev{
+        position: static;
+        padding: 5px 3px;
+        height: 210px;
+        box-shadow: none;
+        border: 1px solid #DEDCDA;    
+    }
+    .customer .card{
+        height: auto;
+        max-height: max-content;
+    }
+    .price{
+        flex-direction: column;
+    }
 }

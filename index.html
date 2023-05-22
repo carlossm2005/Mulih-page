@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <script src="dropmenu.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Mulih</title>
 </head>
 <body>
     <section class="header-page">
+        <div class="head-resp">
+            <img src="imgs/Mulih.svg">
+            <button onclick="AbrirMenu()">Menu</button>
+        </div>
+        <div id="MenuResp" class="menu-resp">
+        <button onclick="CloseMenu()">Close</button>
+        <div class="contenido-resp">
+            <a href="#">Home</a>
+            <a href="#">Property</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contact</a>
+            <a href="#">Sign in</a>
+            <a href="#">Login</a>      
+        </div>
+        </div>
     <header>
         <img src="imgs/Mulih.svg">
         <nav>
