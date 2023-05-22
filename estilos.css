@@ -187,6 +187,7 @@ nav .account{
     justify-content: space-around;
     align-items: center;
     background-color: #FEFEFF;
+    box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
 }
 .location, .type, .price{
     font-style: normal;
@@ -209,6 +210,7 @@ nav .account{
     background-color: #FFFFFF;
     color: #69B99D;
     border: 1px solid #69B99D;
+    box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
 }
 .discover{
     padding: 120px;
@@ -313,6 +315,7 @@ nav .account{
 .card .inquiry a:hover{
     color: #FEFEFF;
     background-color: #69B99D;
+    box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
 }
 .advante{
     padding: 80px 120px;
@@ -406,6 +409,7 @@ nav .account{
 .right button:hover{
     background-color: #FFFFFF;
     color: #69B99D;
+    box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
 }
 .left .rect-230{
     position: absolute;
@@ -577,6 +581,7 @@ footer{
 .send button:hover{
     color: #69B99D;
     background-color: #FEFEFF;
+    box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
 }
 .community p,.service p, .follow p{
     color: #0B2E29;
